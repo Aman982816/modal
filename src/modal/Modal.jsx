@@ -25,6 +25,7 @@ sePreview(view)
   top:0,
   right:0,
   display:'flex',
+  flexDirection:'column',
   justifyContent:"center",
   alignItems:"center",
   height:"100vh",
@@ -38,7 +39,11 @@ sePreview(view)
 style={{
   border:"2px solid yellow",
   height:"450px",
-  width:"450px"
+  width:"450px",
+display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
 }}
 
 >
@@ -70,7 +75,14 @@ ref={editor}
       />
       }
 
-{img&&<button onClick={() => {
+
+    
+
+</div>
+
+<div>
+
+      {img&&<button onClick={() => {
 
 // alert('click')
         // if (editor) {
@@ -90,11 +102,11 @@ downloadImage(dataURL, 'my-canvas.jpeg');
         // }
       }}>Download</button>}
 
-      <button onClick={e=>{
+<button onClick={e=>{
         setImg(null)
       }}>cancel</button>
 
-</div>
+  </div>
 
   </div>
     </>
